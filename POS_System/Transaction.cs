@@ -6,30 +6,14 @@ using System.Threading.Tasks;
 
 public class Transaction
 {
-    internal Customer _Customer { get; set; }
-    public double Cost { get; set; }
+    public Customer _Customer { get; set; }
     public DateTime TransactionTime;
-    public SaleItem[] items;
-
-    public Transaction(Customer customer, double cost, DateTime transactionTime, SaleItem[] items)
+    public Order FinalOrder;
+    public Transaction(Customer customer, double cost, DateTime transactionTime, Order order)
     {
         _Customer = customer;
-        Cost = cost;
         TransactionTime = transactionTime;
-        this.items = items;
+        FinalOrder = order;
     }
 }
 
-public class SaleItem
-{
-    public string Name { get; set; }
-    public double ItemCost { get; set; }
-    public int StockLeft { get; set; }
-
-    public SaleItem(string name, double itemCost, int stockLeft)
-    {
-        Name = name ?? throw new ArgumentNullException(nameof(name));
-        ItemCost = itemCost;
-        StockLeft = stockLeft;
-    }
-}
