@@ -12,11 +12,16 @@ public class ItemWeight : IInventoryItem
     //TODO
     public override float GetStock()
     {
-        throw new NotImplementedException();
+        return (float)ItemStock;
     }
     //TODO
     public override void SetStock(float stock)
     {
         ItemStock = (decimal)stock;
+    }
+
+    public override bool TakeFromStock(float amountToTake)
+    {
+        return true;
     }
 }

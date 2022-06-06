@@ -8,4 +8,5 @@ public abstract class IInventoryItem
 
     public abstract float GetStock();
     public abstract void SetStock(float stock);
+    public abstract bool TakeFromStock(float amountToTake);
 }

@@ -5,11 +5,18 @@ public class ItemUnit : IInventoryItem
     //TODO
     public override float GetStock()
     {
-        throw new NotImplementedException();
+        return (int)ItemStock;
     }
     //TODO
     public override void SetStock(float stock)
     {
         ItemStock = (int)stock;
+    }
+
+    public override bool TakeFromStock(float amountToTake)
+    {
+        if ((float)ItemStock - amountToTake < 0) return false;
+        ItemStock -= (int)Math.Round(amountToTake, 0, MidpointRounding.AwayFromZero);
+        return true;
     }
 }

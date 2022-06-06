@@ -11,8 +11,8 @@ public class InventoryManager
 {
     public List<IInventoryItem> InventoryItems { get; set; } = new();
 
-    public const string _startingInventoryFileName = "C:/Users/rober/Source/Repos/RobertTeaches/POS_System/POS_System/Inventory/starting_inventory.json";
-    public const string _saleItemRecipesFileName= "sale_item_recipes.json";
+    public const string _startingInventoryFileName = "./Inventory/starting_inventory.json";
+    public const string _saleItemRecipesFileName = "sale_item_recipes.json";
 
 
     public void LoadInventoryItems()
@@ -24,11 +24,11 @@ public class InventoryManager
             var root = allJson.Root;
             var items = root["inventoryItems"]!.AsArray();
 
-            foreach(var item in items)
+            foreach (var item in items)
             {
                 var type = item!["type"]!.GetValue<String>();
                 if (type == null) continue;
-                IInventoryItem? inventoryItem = (type == "Unit")? new ItemUnit(): new ItemWeight();
+                IInventoryItem? inventoryItem = (type == "Unit") ? new ItemUnit() : new ItemWeight();
                 inventoryItem.SetStock(item["amount"]!.GetValue<int>());
                 inventoryItem.DateRecieved = DateTime.Now;
                 inventoryItem.Name = item!["name"]!.GetValue<string>();
@@ -39,5 +39,42 @@ public class InventoryManager
 
         }
     }
-}
 
+    //TODO
+    public bool CanMake(SaleItem item)
+    {
+
+        return true;
+    }
+
+    //TODO
+    public string PrintRemainingInventory(bool outputToConsole = true)
+    {
+        string s = "";
+        foreach (var i in InventoryItems)
+        {
+            s += $"{i.Name}: {i.GetStock()}";
+            if (i is ItemWeight weight)
+            {
+                s += weight.unitType.ToString();
+            }
+            s += $"\nRecieved: {i.DateRecieved}\n\n";
+        }
+        if (outputToConsole) Console.WriteLine(s);
+        return s;
+    }
+
+    //TODO
+    public IInventoryItem? GetItemByName(string itemName)
+    {
+        foreach (var i in InventoryItems)
+        {
+            if (i.Name == itemName)
+            {
+                return i;
+            }
+        }
+        return null;
+    }
+
+}
