@@ -1,0 +1,144 @@
+{
+	"items": [
+		{
+			"name": "CheeseBurger",
+			"cost": 5.75,
+			"category": "meal",
+			"ingredients": [
+				{
+					"name": "Burger Patties",
+					"amount": 1,
+					"unit": ""
+				},
+				{
+					"name": "Buns",
+					"amount": 2,
+					"unit": ""
+				},
+				{
+					"name": "Cheese Slice",
+					"amount": 1,
+					"unit": ""
+				},
+				{
+					"name": "Ketchup",
+					"amount": 15,
+					"unit": "grams"
+				},
+				{
+					"name": "Mustard",
+					"amount": 15,
+					"unit": "grams"
+				},
+				{
+					"name": "Pickle Slice",
+					"amount": 2,
+					"unit": ""
+				}
+			]
+		},
+		{
+			"name": "Fries",
+			"cost": 2.25,
+			"category": "side",
+			"ingredients": [
+				{
+					"name": "Potato",
+					"amount": 1,
+					"unit": ""
+				},
+				{
+					"name": "Salt & Pepper",
+					"amount": 50,
+					"unit": "miligrams"
+				},
+			]
+		},
+		{
+			"name": "Soda",
+			"cost": 2.25,
+			"category": "drink",
+			"ingredients": [
+				{
+					"name": "Soda Cup",
+					"amount": 1,
+					"unit": ""
+				},
+				{
+					"name": "Soda Syrup",
+					"amount": 40,
+					"unit": "grams"
+				}
+			]
+		},
+		{
+			"name": "Double CheeseBurger",
+			"cost": 8.75,
+			"category": "meal",
+			"ingredients": [
+				{
+					"name": "Burger Patties",
+					"amount": 1,
+					"unit": ""
+				},
+				{
+					"name": "Buns",
+					"amount": 2,
+					"unit": ""
+				},
+				{
+					"name": "Cheese Slice",
+					"amount": 1,
+					"unit": ""
+				},
+				{
+					"name": "Ketchup",
+					"amount": 15,
+					"unit": "grams"
+				},
+				{
+					"name": "Mustard",
+					"amount": 15,
+					"unit": "grams"
+				},
+				{
+					"name": "Pickle Slice",
+					"amount": 2,
+					"unit": ""
+				}
+			]
+		},
+		{
+			"name": "Hamburger",
+			"cost": 5.25,
+			"category": "meal",
+			"ingredients": [
+				{
+					"name": "Burger Patties",
+					"amount": 1,
+					"unit": ""
+				},
+				{
+					"name": "Buns",
+					"amount": 2,
+					"unit": ""
+				},
+				{
+					"name": "Ketchup",
+					"amount": 15,
+					"unit": "grams"
+				},
+				{
+					"name": "Mustard",
+					"amount": 15,
+					"unit": "grams"
+				},
+				{
+					"name": "Pickle Slice",
+					"amount": 2,
+					"unit": ""
+				}
+			]
+		}
+	]
+}

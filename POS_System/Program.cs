@@ -2,21 +2,11 @@
 public class POS
 {
 
-    static SaleItem[] itemsForSale = { new SaleItem("Small Fry", 1.0, "Sides"),
-                                new SaleItem("Large Fry", 1.5, "Sides"),
-                                new SaleItem("Cheese Burger", 5.0, "Entree"),
-                                new SaleItem("Hamburger", 4.5, "Entree"),
-                                new SaleItem("Chicken Sandwhich", 4.25, "Entree"),
-                                new SaleItem("Chicken Nuggets", 3.5, "Entree"),
-                                new SaleItem("Small Drink", 1.0, "Drinks"),
-                                new SaleItem("Large Drink", 1.0, "Drinks"),
-                                new SaleItem("Milkshake", 2.5, "Desert"),
-                              };
     static List<Transaction> transactions = new();
     static List<Order> orderQueue = new();
     static double netRevenue = 0;
 
-
+    static InventoryManager inventoryManager = new();
     /* TODO: Allow 'customer' interaction from Command line
     1. Should ask for customer name, and allow them to respond
       1a. Is also responsible for making sure custName is valid using ValidateName()
@@ -51,7 +41,8 @@ public class POS
 
     public static void Main(string[] args)
     {
-      
+        inventoryManager.LoadInventoryItems();
+
     }
 
     static void DrawMenu()

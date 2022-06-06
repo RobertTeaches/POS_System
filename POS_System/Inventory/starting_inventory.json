@@ -1,0 +1,75 @@
+{
+	"inventoryItems": [
+		{
+			"name": "Potato",
+			"type": "Unit",
+			"amount": 50,
+			"cost": 0.5
+		},
+		{
+			"name": "Bun",
+			"type": "Unit",
+			"amount": 150,
+			"cost": 0.25
+		},
+		{
+			"name": "Burger Patty",
+			"type": "Unit",
+			"amount": 75,
+			"cost": 1.25
+		},
+		{
+			"name": "Cheese Slice",
+			"type": "Unit",
+			"amount": 75,
+			"cost": 0.35
+		},
+		{
+			"name": "Tomato",
+			"type": "Unit",
+			"amount": 75,
+			"cost": 0.75
+		},
+		{
+			"name": "Pickle Slice",
+			"type": "Unit",
+			"amount": 150,
+			"cost": 0.1
+		},
+		{
+			"name": "Ketchup",
+			"type": "Weight",
+			"amount": 2,
+			"unit": "kilograms",
+			"cost": 3
+		},
+		{
+			"name": "Mustard",
+			"type": "Weight",
+			"amount": 2,
+			"unit": "kilograms",
+			"cost": 3
+		},
+		{
+			"name": "Soda Syrup",
+			"type": "Weight",
+			"amount": 5,
+			"unit": "kilograms",
+			"cost": 1
+		},
+		{
+			"name": "Soda Cup",
+			"type": "Unit",
+			"amount": 75,
+			"cost": 0.25
+		},
+		{
+			"name": "Salt and Pepper",
+			"type": "Weight",
+			"amount": 1,
+			"unit": "kilograms",
+			"cost": 10
+		}
+
+	]
+}
