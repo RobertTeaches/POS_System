@@ -51,10 +51,11 @@ public class POS
 
     public static void Main(string[] args)
     {
-        for(int i = 0; i < 10; i++)
-        {
-            HandleCustomer();
-        }
+      
     }
 
+    static void DrawMenu()
+    {
+
+    }
 }
