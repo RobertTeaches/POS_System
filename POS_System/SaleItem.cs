@@ -15,7 +15,7 @@ public class SaleItem
         }
     }
 
-    public SaleItem(string name, double itemCost, string category = "Misc", params IInventoryItem[] itemsRequired)
+    public SaleItem(string name, double itemCost, string category = "Misc", params IInventoryItem[]? itemsRequired)
     {
         Name = name ?? "Toilet Water";
         ItemCost = itemCost;

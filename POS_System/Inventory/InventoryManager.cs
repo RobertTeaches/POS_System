@@ -12,10 +12,10 @@ public class InventoryManager
     public List<IInventoryItem> InventoryItems { get; set; } = new();
 
     public const string _startingInventoryFileName = "./Inventory/starting_inventory.json";
-    public const string _saleItemRecipesFileName = "sale_item_recipes.json";
+    public const string _saleItemRecipesFileName = "./Menu/sale_item_recipes.json";
 
 
-    public void LoadInventoryItems()
+    public List<IInventoryItem> LoadInventoryItems()
     {
         string jsonText = File.ReadAllText(_startingInventoryFileName);
         if (jsonText != null)
@@ -38,14 +38,9 @@ public class InventoryManager
 
 
         }
+        return InventoryItems;
     }
 
-    //TODO
-    public bool CanMake(SaleItem item)
-    {
-
-        return true;
-    }
 
     //TODO
     public string PrintRemainingInventory(bool outputToConsole = true)
