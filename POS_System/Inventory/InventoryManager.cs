@@ -15,6 +15,7 @@ public class InventoryManager
     public const string _saleItemRecipesFileName = "./Menu/sale_item_recipes.json";
 
 
+    //MAIN TODO:
     public List<IInventoryItem> LoadInventoryItems()
     {
         string jsonText = File.ReadAllText(_startingInventoryFileName);
@@ -26,14 +27,7 @@ public class InventoryManager
 
             foreach (var item in items)
             {
-                var type = item!["type"]!.GetValue<String>();
-                if (type == null) continue;
-                IInventoryItem? inventoryItem = (type == "Unit") ? new ItemUnit() : new ItemWeight();
-                inventoryItem.SetStock(item["amount"]!.GetValue<int>());
-                inventoryItem.DateRecieved = DateTime.Now;
-                inventoryItem.Name = item!["name"]!.GetValue<string>();
-                inventoryItem.CostPerStock = item!["cost"]!.GetValue<decimal>();
-                InventoryItems.Add(inventoryItem);
+               
             }
 
 

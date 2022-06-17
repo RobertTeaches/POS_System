@@ -3,7 +3,7 @@ namespace Burger_Display
     public partial class Form1 : Form
     {
 
-        List<SaleItem> currentMenu;
+        List<SaleItem>? currentMenu;
         InventoryManager inventory = new();
         MenuManager menu = new();
 
@@ -17,8 +17,14 @@ namespace Burger_Display
     
         public void UpdateMenuDisplay()
         {
+            listBox1.Items.Clear();
+            if (currentMenu == null)
+            {
+                listBox1.Items.Add("Menu Failed to Load");
+                return;
+            }
             //Grab Categories
-            foreach (var item in currentMenu)
+            foreach (var item in currentMenu!)
             {
                 listBox1.Items.Add(item.Name);
             }
@@ -28,7 +34,7 @@ namespace Burger_Display
         {
             inventory.LoadInventoryItems();
             currentMenu = menu.LoadMenu(inventory);
-
+            
 
             UpdateMenuDisplay();
         }

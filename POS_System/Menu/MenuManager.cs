@@ -11,9 +11,10 @@ public class MenuManager
     public List<SaleItem> Menu { get; set; } = new();    
 
 
-    //TODO?
-    public List<SaleItem> LoadMenu(InventoryManager loadedInventory, string menuFilePath = "./Menu/sale_item_recipes.json")
+
+    public List<SaleItem>? LoadMenu(InventoryManager loadedInventory, string menuFilePath = "./Menu/sale_item_recipes.json")
     {
+        if (loadedInventory.InventoryItems.Count == 0) return null;
         string jsonText = File.ReadAllText(menuFilePath);
         if (jsonText != null)
         {
